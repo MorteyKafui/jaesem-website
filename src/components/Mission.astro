@@ -1,0 +1,76 @@
+<section class="bg-gray-200 mt-10">
+  <div
+    class="max-w-screen-xl container mx-auto px-10 py-16 flex flex-col gap-16"
+  >
+    <div id="mission" class="flex flex-col lg:flex-row items-center gap-10">
+      <div>
+        <h3 class="font-nunito text-blueColor text-2xl mb-4">Our Mission</h3>
+        <p class="text-lg text-gray-500">
+          Our mission is to bridge the gap between business enhancement and
+          educational empowerment, facilitating growth on multiple fronts. Our
+          services empower businesses to reach their full potential and connect
+          with their audiences effectively. Simultaneously, we strive to empower
+          individuals to excel in their educational pursuits and achieve their
+          goals with confidence. By offering these interconnected services, we
+          believe in creating a positive ripple effect that not only uplifts
+          businesses and individuals but also strengthens communities.
+        </p>
+      </div>
+
+      <img src="images/mission.png" alt="mission" />
+    </div>
+    <div id="vision" class="flex flex-col lg:flex-row items-center gap-10">
+      <div class="lg:order-1">
+        <h3 class="font-nunito text-blueColor text-2xl mb-4">Our Vision</h3>
+        <p class="text-lg text-gray-500">
+          Our target markets encompass businesses of varying sizes and
+          industries seeking to enhance their online presence and engage with
+          their customers more effectively. Additionally, we aim to assist
+          students, professionals, and lifelong learners who seek educational
+          support, guidance, and enhancement. Our comprehensive approach ensures
+          that we cater to the diverse needs of these segments and provide them
+          with solutions that align with our mission of empowerment and growth.
+        </p>
+      </div>
+
+      <img src="images/vision.png" alt="vision" />
+    </div>
+  </div>
+</section>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.fromTo(
+    "#mission",
+    {
+      opacity: 0,
+      x: -200,
+    },
+    {
+      opacity: 1,
+      x: 0,
+      ease: "elastic",
+      duration: 1,
+      scrollTrigger: "#mission",
+    }
+  );
+
+  gsap.fromTo(
+    "#vision",
+    {
+      opacity: 0,
+      x: 200,
+    },
+    {
+      opacity: 1,
+      x: 0,
+      ease: "elastic",
+      duration: 2,
+      scrollTrigger: "#vision",
+    }
+  );
+</script>
