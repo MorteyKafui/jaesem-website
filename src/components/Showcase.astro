@@ -1,0 +1,66 @@
+<header class="h-[100dvh]">
+  <div
+    class="max-w-screen-xl container mx-auto px-10 py-10 flex justify-between"
+  >
+    <div class="hero-title hero-content flex flex-col gap-10">
+      <h1
+        class="font-nunito font-bold text-4xl text-center lg:text-left lg:text-7xl tracking-wider"
+      >
+        Educational Empowerment, <span class="text-blueColor"
+          >Business Enhancement</span
+        >
+      </h1>
+      <p
+        class="hero-text lg:text-xl text-gray-500 tracking-wider font-bold text-sm text-center lg:text-left"
+      >
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda
+        officia voluptas et sunt sed quisquam iusto laudantium unde non quis.
+      </p>
+      <div
+        class="flex flex-col lg:flex-row gap-8 lg:gap-16 text-xl font-bold btn"
+      >
+        <a
+          href="/business"
+          class="bg-blueColor text-center text-white px-10 py-3 shadow-xl hover:text-blueColor hover:border hover:border-blueColor hover:bg-white transition-all duration-1000"
+          >Get Started
+        </a>
+        <a
+          href="#"
+          class="px-10 py-3 text-center border border-blueColor text-blueColor shadow-xl hover:text-white hover:border hover:bg-blueColor transition-all duration-1000"
+          >Contact Us</a
+        >
+      </div>
+    </div>
+    <img
+      class="hero-img hidden lg:block"
+      src="/images/hero-img.png"
+      alt="showcase image"
+    />
+  </div>
+</header>
+
+<script>
+  import { gsap } from "gsap";
+
+  const tl = gsap.timeline({
+    defaults: { opacity: 0, yoyo: true, ease: "back" },
+  });
+
+  tl.from(".hero-title", {
+    y: 100,
+  });
+
+  tl.from(".hero-img", {
+    x: 200,
+    // delay: 1,
+  });
+
+  tl.from(".hero-text", {
+    x: -200,
+    // delay: 1,
+  });
+
+  tl.from(".btn", {
+    y: 200,
+  });
+</script>
