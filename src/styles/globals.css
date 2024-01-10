@@ -128,3 +128,7 @@
 body {
   font-family: "Supreme-Regular";
 }
+
+header {
+  background: linear-gradient(to top left, #3185c9 10%, #ffffff 35%, #a2d4fd);
+}
