@@ -1,0 +1,39 @@
+---
+import MobileNav from "./MobileNav";
+
+export const navItems = [
+  { label: "Home", href: "/" },
+  { label: "Education", href: "/education" },
+  { label: "Bussiness", href: "/business" },
+  { label: "Roadmap", href: "/roadmap" },
+];
+---
+
+<nav class="shadow-lg">
+  <div
+    class="max-w-screen-xl container mx-auto px-10 flex justify-between items-center"
+  >
+    <a href="/"> <img src="/images/logo.png" alt="Jaesam logo" /></a>
+    <ul
+      class="hidden lg:flex justify-between items-center gap-10 font-nunito text-xl text-blueColor"
+    >
+      {
+        navItems.map(({ label, href }) => (
+          <li>
+            <a href={href}>{label}</a>
+          </li>
+        ))
+      }
+    </ul>
+    <div class="block md:hidden">
+      <MobileNav client:load />
+    </div>
+  </div>
+</nav>
+
+<style>
+  img {
+    width: 65px;
+    height: 65px;
+  }
+</style>
