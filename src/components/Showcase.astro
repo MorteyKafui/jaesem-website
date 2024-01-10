@@ -1,4 +1,4 @@
-<header class="h-[100dvh]">
+<header class="lg:h-[100dvh] mb-10">
   <div
     class="max-w-screen-xl container mx-auto px-10 py-10 flex justify-between"
   >
@@ -21,12 +21,12 @@
       >
         <a
           href="/business"
-          class="bg-blueColor text-center text-white px-10 py-3 shadow-xl hover:text-blueColor hover:border hover:border-blueColor hover:bg-white transition-all duration-1000"
+          class="bg-blueColor text-center text-white px-8 py-2 shadow-xl hover:text-blueColor hover:border hover:border-blueColor hover:bg-white transition-all duration-1000"
           >Get Started
         </a>
         <a
           href="#"
-          class="px-10 py-3 text-center border border-blueColor text-blueColor shadow-xl hover:text-white hover:border hover:bg-blueColor transition-all duration-1000"
+          class="px-8 py-2 text-center border border-blueColor text-blueColor shadow-xl hover:text-white hover:border hover:bg-blueColor transition-all duration-1000"
           >Contact Us</a
         >
       </div>
@@ -43,7 +43,7 @@
   import { gsap } from "gsap";
 
   const tl = gsap.timeline({
-    defaults: { opacity: 0, yoyo: true, ease: "back" },
+    defaults: { opacity: 0, yoyo: true, ease: "power1.in" },
   });
 
   tl.from(".hero-title", {
@@ -52,12 +52,12 @@
 
   tl.from(".hero-img", {
     x: 200,
-    // delay: 1,
+    scale: 2,
+    duration: 1,
   });
 
   tl.from(".hero-text", {
     x: -200,
-    // delay: 1,
   });
 
   tl.from(".btn", {

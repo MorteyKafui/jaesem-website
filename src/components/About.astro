@@ -1,0 +1,59 @@
+<section>
+  <div class="max-w-screen-xl container mx-auto px-10 py-8">
+    <h2 class="font-nunito text-5xl text-center text-blueColor mb-10">
+      Who We Are
+    </h2>
+    <div
+      id="about"
+      class="grid grid-cols-1 lg:grid-cols-3 gap-10 place-items-center"
+    >
+      <div class="text-lg text-gray-600 col-span-2">
+        <p>
+          At J.ED, our mission is to be the catalyst that propels businesses to
+          digital eminence and empowers individuals to excel in their
+          educational pursuits. With unwavering dedication to innovation,
+          customization, and ethical practices, we are committed to
+          revolutionizing the way businesses engage with their audiences and
+          individuals embark on their educational journeys.
+        </p>
+        <br />
+        <p>
+          We believe that every business has a unique story to tell and every
+          individual possesses untapped potential. Our purpose is to harness the
+          power of technology and knowledge, delivering tailored solutions that
+          transform brands into online powerhouses and guide students and
+          professionals towards academic brilliance. Through comprehensive
+          business enhancement strategies and educational empowerment services,
+          we strive to pave the way for our clients to achieve success that
+          resonates on digital platforms and within academic spheres.
+        </p>
+        <br />
+        <p>
+          J.ED stands as a beacon of integrity, quality, and empathy. As we
+          embark on this transformative journey, we remain dedicated to
+          exceeding expectations, embracing innovation, and fostering growth for
+          businesses, professionals, and students alike.
+        </p>
+      </div>
+      <img class="about-img hidden lg:block" src="/images/about.svg" alt="" />
+    </div>
+  </div>
+</section>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.from("#about", {
+    opacity: 0,
+    ease: "circ",
+    x: -200,
+    duration: 2,
+    yoyo: true,
+    scrollTrigger: {
+      trigger: "#about",
+    },
+  });
+</script>
